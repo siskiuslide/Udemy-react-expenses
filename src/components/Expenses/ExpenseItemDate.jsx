@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./expenseDate.css";
 
 const ExpenseItemDate = (props) => {
-  const date = props.date.toISOString();
+  // const date = props.date.toISOString();
   // const month = date.toLocaleString("en-GB", { month: "long" });
   // const day = date.toLocaleString("en-GB", { day: "2-digit" });
   //   const year = parseInt(date).getFullYear();
