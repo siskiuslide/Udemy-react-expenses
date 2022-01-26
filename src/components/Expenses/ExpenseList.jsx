@@ -9,26 +9,26 @@ import "./expenseList.css";
 const ExpenseList = (props) => {
   const { expenses } = props;
   let filteredList;
-  const [currentYear, setCurrentYear] = useState("2020");
+  const [currentYear, setCurrentYear] = useState("2022");
   const onYearChangeHandler = (e) => {
     console.log(e.target.value);
     return setCurrentYear(e.target.value);
   };
 
   currentYear === "All"
-    ? (filteredList = expenses)
-    : (filteredList = expenses.filter((exp) => exp.date.getFullYear().toString() === currentYear));
+  ? (filteredList = expenses)
+  : (filteredList = expenses.filter((exp) => exp.date.getFullYear().toString() === currentYear));
 
-  return (
-    <Card className="expenses">
-      <YearFilter year={currentYear} onChangeYear={onYearChangeHandler} />
-      <ExpensesChart expenses={filteredList} />
-      {filteredList.length === 0 && <p className="expenses-list__fallback">No Expenses Found</p>}
-      {filteredList.length > 0 &&
-        filteredList.map((ex) => {
-          return <ExpenseItem key={ex.id} amount={ex.amount} title={ex.title} date={ex.date} />;
-        })}
-    </Card>
+return (
+  <Card className="expenses">
+    <YearFilter year={currentYear} onChangeYear={onYearChangeHandler} />
+    <ExpensesChart year={currentYear} expenses={filteredList} />
+    {filteredList.length === 0 && <p className="expenses-list__fallback">No Expenses Found</p>}
+    {filteredList.length > 0 &&
+      filteredList.map((ex) => {
+        return <ExpenseItem key={ex.id} amount={ex.amount} title={ex.title} date={ex.date} />;
+      })}
+  </Card>
   );
 };
 

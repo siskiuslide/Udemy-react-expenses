@@ -5,24 +5,28 @@ import NewExpense from "./components/NewExpense/NewExpense";
 import { useState } from "react";
 const initialExpenses = [
   {
-    id: "e1",
-    title: "Toilet Paper",
-    amount: 94.12,
-    date: new Date(2020, 7, 14),
-  },
-  { id: "e2", title: "New TV", amount: 799.49, date: new Date(2021, 2, 12) },
-  {
-    id: "e3",
-    title: "Car Insurance",
-    amount: 294.67,
-    date: new Date(2021, 2, 28),
-  },
-  {
-    id: "e4",
-    title: "New Desk",
-    amount: 450,
-    date: new Date(2022, 1, 5),
-  },
+  id: "e1",
+  title: "Paint",
+  amount: 34.12,
+  date: new Date(2021, 4, 20),
+},
+{
+  id: "e2",
+  title: "Car Insurance",
+  amount: 694.67,
+  date: new Date(2021, 6, 28),
+},
+{ id: "e3", title: "Chair", amount: 240, date: new Date(2022, 0, 6) },
+{
+  id: "e4",
+  title: "New Desk",
+  amount: 100,
+  date: new Date(2022, 0, 9),
+},
+{ id: "e5", title: "Mugs", amount: 24, date: new Date(2022, 1, 8) },
+{ id: "e6", title: "Plants", amount: 30, date: new Date(2022, 1, 15) },
+{ id: "e7", title: "Clothes", amount: 150, date: new Date(2022, 1, 24) },
+{ id: "e8", title: "Wheels", amount: 24, date: new Date(2022, 2, 22) },
 ];
 
 function App() {
